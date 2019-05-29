@@ -1,0 +1,35 @@
+﻿/*Disposição do texto*/
+.textDisplay {
+    padding: 30px;
+    margin-top: -50px;
+    color: black;
+}
+
+
+/*Definição do estilo do parágrafo*/
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: black;
+}
+
+/*Definição do estilo do texto de uma lista*/
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: black;
+}
+
+/*Definição do estilo do header1*/
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9em;
+    color: black;
+}
+
+/*Definição do estilo do header2*/
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: black;
+}

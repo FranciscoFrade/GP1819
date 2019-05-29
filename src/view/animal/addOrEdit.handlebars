@@ -1,0 +1,97 @@
+<div id="register">
+<h1>{{viewTitle}}</h1>
+
+{{#ifBoolCond isUpdate}}
+<div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá atualizar os dados de uma ficha de animal</span>
+    </div>
+{{else}}
+<div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá registar uma ficha de animal</span>
+    </div>
+{{/ifBoolCond}}
+
+{{> flashMsgWarning}}
+
+<form id="registerForm" action="/animals/add" method="POST">
+    <input type="hidden" name="_id" value="{{animal._id}}">
+    <div class="form-group">
+        <label>Link da fotografia</label>
+        <input type="text" class="input-form" name="photoLink" placeholder="Link da fotografia" value="{{animal.photoLink}}" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="input-form" name="name" placeholder="Nome do animal" value="{{animal.name}}" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="text-danger"></span>
+        <div>
+            {{animal.nameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Genero</label>
+        <select name="gender" class="input-form" placeholder="gender" required>
+            {{#ifGenderCond animal.gender}}
+                <option value="Male" selected>Macho</option>
+                <option value="Female">Fêmea</option>
+            {{else}}
+                <option value="Male">Macho</option>
+                <option value="Female" selected>Fêmea</option>
+            {{/ifGenderCond}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Vacinado</label>
+        <select name="vaccinated" class="input-form" placeholder="vaccinated" required>
+            {{#ifBoolCond animal.vaccinated}}
+                <option value="true" selected>Sim</option>
+                <option value="false">Não</option>
+            {{else}}
+                <option value="true">Sim</option>
+                <option value="false" selected>Não</option>
+            {{/ifBoolCond}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Tipo</label>
+        <select name="dog" class="input-form" placeholder="dog" required>
+            {{#ifBoolCond animal.dog}}
+                <option value="true" selected>Cão</option>
+                <option value="false">Gato</option>
+            {{else}}
+                <option value="true">Cão</option>
+                <option value="false" selected>Gato</option>
+            {{/ifBoolCond}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Esterilizado</label>
+        <select name="sterilized" class="input-form" placeholder="sterilized" required>
+            {{#ifBoolCond animal.sterilized}}
+                <option value="true" selected>Sim</option>
+                <option value="false">Não</option>
+            {{else}}
+                <option value="true">Sim</option>
+                <option value="false" selected>Não</option>
+            {{/ifBoolCond}}
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Data de nascimento</label>
+        <input type="date" name="birthday" class="input-form" placeholder="birthday" data-date-format="DD M YY" value={{animalBirthday}} required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <span class="text-danger"></span>
+    </div>
+    <div>
+        <button type="submit" class="confirmationButton">Confirmar</button>
+        <a href="/animals">Lista</a>
+    </div>
+</form>
+</div>

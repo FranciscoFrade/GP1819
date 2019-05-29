@@ -1,0 +1,56 @@
+﻿/* Definição do layout das tooltips */
+.tooltips {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 530px;
+    background-color: #005b55;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+}
+
+.tooltips .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #02a79c transparent transparent;
+}
+
+.tooltips .tooltiptext-pagina::after {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #02a79c transparent transparent;
+}
+
+.tooltips:hover .tooltiptext {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.tooltips:hover .tooltiptext-pagina {
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* Alinhar o icon Ajudas com o texto dos titulos das páginas*/
+.helpText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

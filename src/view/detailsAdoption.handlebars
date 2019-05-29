@@ -1,0 +1,34 @@
+<div class="textDisplay">
+    <div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá consultar os dados de uma ficha de adopção</span>
+    </div>
+<h1>Ficha de Adopção</h1>
+    <div style="position:absolute; margin-left:10%">
+        {{#ifGenderCond adoption.gender}}
+            <img class="animal-image-male" src="{{adoption.animal_photo}}" alt="Fotografia do animal"/>
+        {{else}}
+            <img class="animal-image-female" src="{{adoption.animal_photo}}" alt="Fotografia do animal"/>
+        {{/ifGenderCond}}
+    </div>
+    <dl class="dl-horizontal" style="position:absolute; left:30%">
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">ID da Adopção</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.adoption_id}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">ID do Animal</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.animal_id}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Animal</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.animal}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">ID do Adoptante</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.adopter_id}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Adoptante</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.adopter}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Data de Adopção</dt>
+        <dd style="margin: 0; display: inline;">{{adoption.adoptionDate}}</dd>
+        <p></p>
+    </dl>
+</div>

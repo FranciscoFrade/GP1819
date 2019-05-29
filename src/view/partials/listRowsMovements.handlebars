@@ -1,0 +1,28 @@
+{{#each movements}}
+<tr>
+    {{#ifNullCond isIn}}
+        <td> </td>
+    {{else}}
+        {{#ifBoolCond isIn}}
+            <td class="dot-green">Entrada</td>
+        {{else}}
+            <td class="dot-red">Saída</td>
+        {{/ifBoolCond}}
+    {{/ifNullCond}}
+    <td>
+        {{movement_id}}
+    </td>
+    <td>
+        {{user}}
+    </td>
+    <td>
+        {{animal}}
+    </td>
+    <td>
+        {{date}}
+    </td>
+
+    {{> actionsMovements}}
+    
+</tr>
+{{/each}}

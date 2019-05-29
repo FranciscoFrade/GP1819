@@ -1,0 +1,9 @@
+{{#if showActions}}
+    <td><a href="/{{route}}/details/{{adoption_id}}">Visualizar</a></td>
+    <td><a href="/{{route}}/update/{{adoption_id}}">Actualizar</a></td>
+    <td><a href="" onclick="confirmAdoptionDelete({{adoption_id}})">Eliminar</a></td>
+{{else}}
+    <td></td>
+    <td></td>
+    <td></td>
+{{/if}}

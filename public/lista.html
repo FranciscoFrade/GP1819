@@ -1,0 +1,37 @@
+<body>
+    <div class="textDisplay">
+
+        <h3><a href="/animal" class="confirmationButton">Adicionar</a></h3>
+        <h1>Lista de Animais</h1>
+
+        <table class="table" style="width: 750px">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>Genero</th>
+                    <th>Vacinado</th>
+                    <th>Cão</th>
+                    <th>Esterilizado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.birthday}}</td>
+                    <td>{{this.gender}}</td>
+                    <td>{{this.vaccinated}}</td>
+                    <td>{{this.dog}}</td>
+                    <td>{{this.sterilized}}</td>
+                    <td>
+                        <a href="/animal/update/{{this._id}}">Editar</a>
+                        <a href="/animal/delete/{{this._id}}" onclick="return confirm('Tem a certeza que deseja eliminar?');">Eliminar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</body>

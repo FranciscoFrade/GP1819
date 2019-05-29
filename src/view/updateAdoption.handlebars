@@ -1,0 +1,43 @@
+<div class="tooltips">
+    <img src="./images/help.jpg" with="25" height="25" alt="Ajuda" />
+    <span class="tooltiptext">Nesta p&aacute;gina poder&aacute; consultar e atualizar os dados da adopção registados no
+        SI.</span>
+</div>
+<div id="register">
+    <h1>Actualizar adopção</h1>
+    <form id="registerForm" onsubmit="updateAdoption({{adoption.adoption_id}}); return false">
+        <div class="form-group">
+            <label>Adoptante</label>
+            <select id="adopterSelect" class="input-form">
+                {{#adopters}}
+                <option value="{{adopter_id}}_{{adopter}}">{{adopter_id}} - {{adopter}}</option>
+                {{/adopters}}
+            </select>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Animal</label>
+            <select id="animalSelect" class="input-form">
+                {{#animals}}
+                <option value="{{animal_id}}_{{animal}}">{{animal_id}} - {{animal}}</option>
+                {{/animals}}
+            </select>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Data de Adopção</label>
+            <input id="adoptionDate" class="input-form" type="date" name="adoptionDate"
+                value="{{adoption.adoptionDate}}" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="text-danger"></span>
+        </div>
+        <div id="submit" class="form-group">
+            <button type="submit" class="confirmationButton">Actualizar</button>
+        </div>
+    </form>
+</div>

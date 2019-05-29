@@ -1,0 +1,64 @@
+<div class="tooltips">
+    <img src="./images/help.jpg" with="25" height="25" alt="Ajuda" />
+    <span class="tooltiptext">Nesta p&aacute;gina poder&aacute; consultar as entradas e saídas dos animais
+        que se encontram registados no SI.</span>
+</div>
+<div style="margin-left: 3em">
+    <h2>{{description}}</h2>
+    <h3><a class="confirmationButton" href="/movements/add">Adicionar</a></h3>
+</div>
+<table id="usersListTable">
+    <thead>
+        <tr>
+            <th>Pesquisar por:</th>
+            <th>Movimento</th>
+            <th>ID</th>
+            <th>Responsável</th>
+            <th>Animal</th>
+            <th>Data</th>
+            <th colspan="3">Acções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="searchCell" rowspan={{searchColumnRowspan}}>{{> searchColumnMovements}}</td>
+            {{#ifNullCond firstLine.isIn}}
+                <td> </td>
+            {{else}}
+                {{#ifBoolCond firstLine.isIn}}
+                    <td class="dot-green">Entrada</td>
+                {{else}}
+                    <td class="dot-red">Saída</td>
+                {{/ifBoolCond}}
+                    <td>
+            {{/ifNullCond}}
+                {{firstLine.movement_id}}
+            </td>
+            <td>
+                {{firstLine.user}}
+            </td>
+            <td>
+                {{firstLine.animal}}
+            </td>
+            <td>
+                {{firstLine.date}}
+            </td>
+            {{#if firstLine.showActions}}
+                <td><a href="/movements/details/{{firstLine.movement_id}}">Visualizar</a></td>
+                {{#if firstLine.isComplete}}
+                    <td></td>
+                {{else}}
+                    <td><a href="/movements/entry/{{firstLine.movement_id}}">Dar entrada</a></td>
+                {{/if}}
+            {{else}}
+                <td></td>
+            {{/if}}
+            <td></td>
+
+        </tr>
+
+        {{> listRowsMovements}}
+
+    </tbody>
+
+</table>

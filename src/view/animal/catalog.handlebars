@@ -1,0 +1,19 @@
+    <div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá visualizar os animais que se encontram na Quinta do Mião. Eles precisam de um adotante!</span>
+    </div>
+    <ul class="animal_container float">
+            {{#each catalog}}
+            <li class="float-item">
+                    <a href="/animals/details/{{_id}}">
+                        {{#ifGenderCond gender}}
+                            <img class="animal-image-male" src="{{photoLink}}" alt="Fotografia do animal"/>
+                        {{else}}
+                            <img class="animal-image-female" src="{{photoLink}}" alt="Fotografia do animal"/>
+                        {{/ifGenderCond}}
+                        <p></p>
+                        <label class="animal-list-name">{{name}}</label>
+                    </a>
+            </li>
+            {{/each}}
+    </ul>

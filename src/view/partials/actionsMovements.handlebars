@@ -1,0 +1,11 @@
+    {{#if showActions}}
+    <td><a href="/movements/details/{{movement_id}}">Visualizar</a></td>
+        {{#if isComplete}}
+            <td></td>
+        {{else}}
+            <td><a href="/movements/entry/{{movement_id}}">Dar entrada</a></td>
+        {{/if}}
+    {{else}}
+    <td></td>
+    {{/if}}
+    <td></td>

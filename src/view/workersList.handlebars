@@ -1,0 +1,52 @@
+<div class="tooltips">
+        <img src="./images/help.jpg" with="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta p&aacute;gina poder&aacute; consultar, editar e eliminar os funcion&aacute;rios que se encontram registados no SI.</span>
+    </div>
+<div style="margin-left: 3em">
+    <h2>{{description}}</h2>
+</div>
+<table id="usersListTable">
+    <thead>
+        <tr>
+            <th>Pesquisar por:</th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Data de Nascimento</th>
+            <th colspan="2">Acções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="searchCell" rowspan={{searchColumnRowspan}}>{{> searchColumn}}</td>
+            <td>
+                {{firstLine.user_id}}
+            </td>
+            <td>
+                {{firstLine.username}}
+            </td>
+            <td>
+                {{firstLine.phone}}
+            </td>
+            <td>
+                {{firstLine.email}}
+            </td>
+            <td>
+                {{firstLine.birthDate}}
+            </td>
+            {{#if firstLine.showActions}}
+            <td><a href="/{{firstLine.route}}/{{firstLine.user_id}}">Actualizar</a></td>
+            <td><a href="" onclick="confirmWorkerDelete({{firstLine.user_id}})">Eliminar</a></td>
+            {{else}}
+            <td></td>
+            <td></td>
+            {{/if}}
+
+        </tr>
+
+        {{> listRowsWorkers}}
+
+    </tbody>
+
+</table>

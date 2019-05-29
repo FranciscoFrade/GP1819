@@ -1,0 +1,83 @@
+<div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá criar,consultar, editar e eliminar os animais que se encontram registados no SI - Quinta do Mião</span>
+    </div>
+    <div style="margin-left: 3em">
+        <h2>Lista de Animais</h2>
+        <h3><a href="/animals/add" class="confirmationButton">Adicionar</a></h3>
+    </div>
+    <table id="usersListTable">
+        <thead>
+            <tr>
+                <th>Pesquisa por:</th>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Género</th>
+                <th>Vacinado</th>
+                <th>Tipo</th>
+                <th>Esterilizado</th>
+                <th colspan="3">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="searchCell" rowspan={{searchColumnRowspan}}>{{> searchColumnAnimals}}</td>
+                <td>{{firstLine.name}}</td>
+                <td>{{firstLine.birthday}}</td>
+                {{#ifNullCond firstLine.gender}}
+                    <td> </td>
+                {{else}}
+                    {{#ifGenderCond firstLine.gender}}
+                        <td>Macho</td>
+                    {{else}}
+                        <td>Fêmea</td>
+                    {{/ifGenderCond}}
+                {{/ifNullCond}}
+                
+                {{#ifNullCond firstLine.vaccinated}}
+                    <td> </td>
+                {{else}}
+                    {{#ifBoolCond firstLine.vaccinated}}
+                        <td>Sim</td>
+                    {{else}}
+                        <td>Não</td>
+                    {{/ifBoolCond}}
+                {{/ifNullCond}}
+
+                {{#ifNullCond firstLine.dog}}
+                    <td> </td>
+                {{else}}
+                    {{#ifBoolCond firstLine.dog}}
+                        <td>Cão</td>
+                    {{else}}
+                        <td>Gato</td>
+                    {{/ifBoolCond}}
+                {{/ifNullCond}}
+
+                {{#ifNullCond firstLine.sterilized}}
+                    <td> </td>
+                {{else}}
+                    {{#ifBoolCond firstLine.sterilized}}
+                        <td>Sim</td>
+                    {{else}}
+                        <td>Não</td>
+                    {{/ifBoolCond}}
+                {{/ifNullCond}}
+                {{#if firstLine.showActions}}
+                <td><a href="/animals/details/{{firstLine._id}}">Visualizar</a></td>
+                {{#ifBoolCond isVolunteerLogged}}
+                    <td></td>
+                    <td></td>
+                {{else}}
+                    <td><a href="/animals/update/{{firstLine._id}}">Actualizar</a></td>
+                    <td><a href="/animals/delete/{{firstLine._id}}">Eliminar</a></td>
+                {{/ifBoolCond}}
+                {{else}}
+                <td></td>
+                <td></td>
+                <td></td>
+                {{/if}}
+            </tr>
+            {{> listRowsAnimals}}
+        </tbody>
+</table>

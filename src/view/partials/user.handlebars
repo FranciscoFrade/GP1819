@@ -1,0 +1,19 @@
+<div>
+
+    {{#if isUserLogged.isLogged}}
+    <div style="text-align: right; margin-right: 3em">
+
+        <h5 style="margin-bottom: -1em !important">{{isUserLogged.profile}}</h5>
+        <h3>{{isUserLogged.username}}</h3>
+
+        <form action="/logout">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+    {{else}}
+
+    <a class="menu_login" href="/register">Registar</a>
+    <a class="menu_login" href="/login">Iniciar Sessão</a>
+
+    {{/if}}
+</div>

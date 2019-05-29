@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Quinta do Mião</title>
+    <meta name="description" content="{{description}}">
+    <link rel="stylesheet" type="text/css" href="/css/button.css">
+    <link rel="stylesheet" type="text/css" href="/css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="/css/input.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/text.css">
+    <link rel="stylesheet" type="text/css" href="/css/Tooltip.css">
+    <script type="text/javascript" src="/js/scripts.js"></script>
+</head>
+
+<body>
+    <div>
+        <div id="logo">
+            <img src="/images/Logo.png" width="100" alt="Logo" />
+            <img src="/images/nome.png" height="100" alt="Nome" />
+        </div>
+
+        {{> user}}
+
+    </div>
+    <div>
+        <ul class="menu_bar">
+            
+            {{#if selectedMenu.home}}
+            <li class="menu_element" id="selected">Início</li>
+            <li class="menu_element"><a href="/animals/catalog">Animais</a></li>
+            <li class="menu_element"><a href="/volunteering">Voluntariado</a></li>
+                {{#if isUserLogged.username}}
+                    {{> operationsDropDownMenu}}
+                {{/if}}
+            <li class="menu_element"><a href="/about">Sobre nós</a></li>
+            {{else if selectedMenu.animals}}
+            <li class="menu_element"><a href="/">Início</a></li>
+            <li class="menu_element"><a href="/animals/catalog" id="selected">Animais</a></li>
+            <li class="menu_element"><a href="/volunteering">Voluntariado</a></li>
+                {{#if isUserLogged.username}}
+                    {{> operationsDropDownMenu}}
+                {{/if}}
+            <li class="menu_element"><a href="/about">Sobre nós</a></li>
+            {{else if selectedMenu.volunteering}}
+            <li class="menu_element"><a href="/">Início</a></li>
+            <li class="menu_element"><a href="/animals/catalog">Animais</a></li>
+            <li class="menu_element" id="selected">Voluntariado</li>
+                {{#if isUserLogged.username}}
+                    {{> operationsDropDownMenu}}
+                {{/if}}
+            <li class="menu_element"><a href="/about">Sobre nós</a></li>
+            {{else if selectedMenu.operations}}
+            <li class="menu_element"><a href="/">Início</a></li>
+            <li class="menu_element"><a href="/animals/catalog">Animais</a></li>
+            <li class="menu_element"><a href="/volunteering">Voluntariado</a></li>
+                {{#if isUserLogged.username}}
+                    {{> operationsDropDownMenu}}
+                {{/if}}
+            <li class="menu_element"><a href="/about">Sobre nós</a></li>
+            {{else if selectedMenu.about}}
+            <li class="menu_element"><a href="/">Início</a></li>
+            <li class="menu_element"><a href="/animals/catalog">Animais</a></li>
+            <li class="menu_element"><a href="/volunteering">Voluntariado</a></li>
+                {{#if isUserLogged.username}}
+                    {{> operationsDropDownMenu}}
+                {{/if}}
+            <li class="menu_element" id="selected">Sobre nós</li>
+            {{/if}}         
+        </ul>
+    </div>
+
+
+
+    {{{body}}}
+
+
+
+    <div>
+        <footer id="contactos">
+            <ul>
+                <li>Contactos</li>
+                <li><span>Telefone:</span> 212 806 700</li>
+                <li><span>Email:</span> qmiao@email.com</li>
+                <li><span>Fax:</span> 212 806 701</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<div class="textDisplay">
+    <div class="tooltips">
+        <img src="./images/help.jpg" width="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá consultar os dados de uma ficha de um animal</span>
+    </div>
+    <div style="position:absolute; margin-left:10%">
+        <h1>{{animal.name}}</h1>
+        {{#ifGenderCond animal.gender}}
+            <img class="animal-image-male" src="{{animal.photoLink}}" alt="Fotografia do animal"/>
+        {{else}}
+            <img class="animal-image-female" src="{{animal.photoLink}}" alt="Fotografia do animal"/>
+        {{/ifGenderCond}}
+    </div>
+    <dl class="dl-horizontal" style="position:absolute; left:30%; margin: 100px 30px">
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Data de Nascimento</dt>
+        <dd style="margin: 0; display: inline;">{{birthday}}</dd>
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Género</dt>
+        {{#ifGenderCond animal.gender}}
+            <dd style="margin: 0; display: inline;">Macho</dd>
+        {{else}}
+            <dd style="margin: 0; display: inline;">Fêmea</dd>
+        {{/ifGenderCond}}
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Vacinado</dt>
+        {{#ifBoolCond animal.vaccinated}}
+            <dd style="margin: 0; display: inline;">Sim</dd>
+        {{else}}
+            <dd style="margin: 0; display: inline;">Não</dd>
+        {{/ifBoolCond}}
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Esterilizado</dt>
+        {{#ifBoolCond animal.sterilized}}
+            <dd style="margin: 0; display: inline;">Sim</dd>
+        {{else}}
+            <dd style="margin: 0; display: inline;">Não</dd>
+        {{/ifBoolCond}}
+        <p></p>
+        <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Tipo</dt>
+        {{#ifBoolCond animal.dog}}
+            <dd style="margin: 0; display: inline;">Cão</dd>
+        {{else}}
+            <dd style="margin: 0; display: inline;">Gato</dd>
+        {{/ifBoolCond}}
+
+        {{#ifBoolCond normalUser}}
+        {{else}}
+            <p></p>
+            <dt style="margin-right: 0.5em; display: inline; font-weight: bold;">Estado</dt>
+            {{#ifAdoptedCond animal.state}}
+                <dd style="margin: 0; display: inline;" class="dot-red">Adotado</dd>
+            {{else}}
+                {{#ifAvailableCond animal.state}}
+                    <dd style="margin: 0; display: inline;" class="dot-green">Disponível</dd>
+                {{else}}
+                    <dd style="margin: 0; display: inline;" class="dot-yellow">Fora do albergue</dd>
+                {{/ifAvailableCond}}
+            {{/ifAdoptedCond}}
+        {{/ifBoolCond}}
+        
+    </dl>
+</div>

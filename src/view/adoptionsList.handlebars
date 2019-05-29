@@ -1,0 +1,52 @@
+<div class="tooltips">
+    <img src="./images/help.jpg" with="25" height="25" alt="Ajuda" />
+    <span class="tooltiptext">Nesta p&aacute;gina poder&aacute; adicionar, editar e eliminar as adopções que se
+        encontram registadas no SI.</span>
+</div>
+<div style="margin-left: 3em">
+    <h2>{{description}}</h2>
+    <h3><a class="confirmationButton" href="/adoptions/add">Adicionar</a></h3>
+</div>
+<table id="usersListTable">
+    <thead>
+        <tr>
+            <th>Pesquisar por:</th>
+            <th>ID</th>
+            <th>Adoptante</th>
+            <th>Animal</th>
+            <th>Data de Adopção</th>
+            <th colspan="3">Acções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="searchCell" rowspan={{searchColumnRowspan}}>{{> searchColumnAdoptions}}</td>
+            <td>
+                {{firstLine.adoption_id}}
+            </td>
+            <td>
+                {{firstLine.adopter}}
+            </td>
+            <td>
+                {{firstLine.animal}}
+            </td>
+            <td>
+                {{firstLine.adoptionDate}}
+            </td>
+            {{#if firstLine.showActions}}
+            <td><a href="/{{firstLine.route}}/details/{{firstLine.adoption_id}}">Visualizar</a></td>
+            <td><a href="/{{firstLine.route}}/update/{{firstLine.adoption_id}}">Actualizar</a></td>
+            <td><a href="" onclick="confirmAdoptionDelete({{firstLine.adoption_id}})">Eliminar</a></td>
+            {{else}}
+            <td></td>
+            <td></td>
+            <td></td>
+            {{/if}}
+
+        </tr>
+
+        {{> listRowsAdoptions}}
+
+    </tbody>
+
+</table>

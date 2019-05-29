@@ -1,0 +1,28 @@
+<div class="tooltips">
+        <img src="./images/help.jpg" with="25" height="25" alt="Ajuda" />
+        <span class="tooltiptext">Nesta página poderá realizar o login na aplica&ccedil;&atilde;o</span>
+    </div>
+<div id="login">
+    <h1>Iniciar sessão</h1>
+    {{> flashMsgWarning}}
+    
+    <form id="loginForm" action="/login" method="POST">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input class="input-form" id="emailInput" type="email" name="email" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Palavra-passe</label>
+            <input id="input_pw" class="input-form" type="password" name="password" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <span class="text-danger" id="span_pw"></span>
+        </div>
+        <div id="submit" class="form-group">
+            <button type="submit" class="confirmationButton">Iniciar Sessão</button>
+        </div>
+    </form>
+</div>

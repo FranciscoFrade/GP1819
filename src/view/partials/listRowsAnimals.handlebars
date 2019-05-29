@@ -1,0 +1,46 @@
+{{#each list}}
+<tr>
+    <td>{{name}}</td>
+    <td>{{birthday}}</td>
+    {{#ifNullCond gender}}
+        <td> </td>
+    {{else}}
+        {{#ifGenderCond gender}}
+            <td>Macho</td>
+        {{else}}
+            <td>Fêmea</td>
+        {{/ifGenderCond}}
+    {{/ifNullCond}}
+                
+    {{#ifNullCond vaccinated}}
+        <td> </td>
+    {{else}}
+        {{#ifBoolCond vaccinated}}
+            <td>Sim</td>
+        {{else}}
+            <td>Não</td>
+        {{/ifBoolCond}}
+    {{/ifNullCond}}
+
+    {{#ifNullCond dog}}
+        <td> </td>
+    {{else}}
+        {{#ifBoolCond dog}}
+            <td>Cão</td>
+        {{else}}
+            <td>Gato</td>
+        {{/ifBoolCond}}
+    {{/ifNullCond}}
+
+    {{#ifNullCond sterilized}}
+        <td> </td>
+    {{else}}
+        {{#ifBoolCond sterilized}}
+            <td>Sim</td>
+        {{else}}
+            <td>Não</td>
+        {{/ifBoolCond}}
+    {{/ifNullCond}}
+    {{> actionsAnimals}}
+</tr>
+{{/each}}

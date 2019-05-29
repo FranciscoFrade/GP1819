@@ -1,0 +1,14 @@
+{{#if showActions}}
+    <td><a href="/animals/details/{{_id}}">Visualizar</a></td>
+    {{#ifBoolCond isVolunteerLogged}}
+    <td></td>
+    <td></td>
+    {{else}}
+    <td><a href="/animals/update/{{_id}}">Actualizar</a></td>
+    <td><a href="/animals/delete/{{_id}}">Eliminar</a></td>
+    {{/ifBoolCond}}
+{{else}}
+    <td></td>
+    <td></td>
+    <td></td>
+{{/if}}

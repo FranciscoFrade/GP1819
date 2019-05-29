@@ -1,0 +1,531 @@
+﻿
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+.header {
+    background-color: #02877E;
+    text-align: center;
+    padding: 20px;
+    height: 185px;
+}
+
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F9F9F9;
+}
+
+.animal-image-female {
+    width: 210px;
+    height: 230px;
+    margin: 5px;
+    border: 5px solid pink;
+    border-radius: 50%;
+}
+
+.animal-image-male {
+    width: 210px;
+    height: 230px;
+    margin: 5px;
+    border: 5px solid blue;
+    border-radius: 50%;
+}
+
+.details dt {
+    float: left;
+    clear: left;
+    width: 100em;
+    border-top: 20px
+}
+
+.login-screen {
+    margin-left: 34%;
+    border: 0px;
+}
+
+.login-parcial {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin: 25px 30px;
+}
+
+.warning-message {
+    background-color: #ccc;
+    color: white !important;
+    border-radius: 4px;
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+/*Wrapping element
+Set some basic padding to keep content from hitting the edges*/
+
+/*
+.body-content {
+    margin-top: 5px;
+}*/
+
+a {
+    text-decoration: none;
+}
+
+#logo {
+    left: 0;
+    top: -20px;
+    width: 395px;
+    height: 110px;
+    margin-bottom: 20px;
+    padding: 5px 5px 5px 15px;
+    float: left;
+    background-color: #02877E;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 140px;
+    float: left;
+}
+
+.imgNome {
+    width: auto;
+    height: 140px;
+}
+
+.loginPartial {
+    float: right;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+    .loginPartial a {
+        display: inline-block;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        margin: auto;
+        text-align: center;
+    }
+
+    .loginPartial li {
+        padding: 3px 5px;
+        list-style-type: none;
+        margin-bottom: 7px;
+    }
+
+    .loginPartial a:hover {
+        background-color: #02a79c;
+        color: white;
+    }
+
+.logoutPartial {
+    float: right;
+    margin-left: -40px;
+}
+
+.logout {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+    .logout:hover {
+        background-color: #02a79c;
+        color: white;
+    }
+
+.animal-ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.animal-element {
+    display: inline-block;
+}
+
+.animal-list-name {
+    font-size: 25px;
+    color: #02A79C;
+    display: inline-block;
+}
+
+.menu_bar {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #02A79C;
+    display: table;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.vl {
+    border-left: 1px solid #02877E;
+    display: inline-block;
+    height: 19px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hl {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #02A79C;
+    margin: 0 0;
+    padding: 0;
+}
+
+.menu_element {
+    float: none;
+    display: inline-block;
+}
+
+.menu_element a, .menu_element li {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    color: #333333;
+    padding: 8px;
+}
+
+.menu_element li {
+    cursor: pointer;
+}
+
+.menu_element a:hover, .menu_element li:hover, #menu_element_op {
+    background-color: #02877E;
+    color: white !important;
+}
+
+.dropdown-content a {
+    font-size: 16px !important;
+}
+
+#selected {
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #02877E;
+    color: white;
+}
+
+/*Margem do footer*/
+footer {
+    margin-left: 2%
+}
+
+#contactos {
+    font-size: .8em;
+    float: right;
+    margin-right: 50px
+}
+
+#contactos ul {
+    list-style: none;
+}
+
+#contactos span {
+    font-weight: bold
+}
+
+/*Estilo da barra de navegação*/
+.menu {
+    overflow: hidden;
+    background-color: black;
+    margin: 0 auto;
+}
+
+/*Estilo dos links do menu*/
+.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ /*Muda a cor ao passar em cima do link*/
+.menu a:hover {
+    background-color: orange;
+    color: white;
+}
+
+/*Sub-menu Operações*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.show {
+    display: block;
+}
+
+/*Lista de utilizadores*/
+#usersListTable {
+    margin-top: 3em;
+    padding: 0;
+    text-align: center;
+    min-width: 100%;
+    border-collapse: collapse;
+    border-bottom: 2px solid black;
+}
+
+#usersListTable thead, #usersListTable tbody {
+    padding:0;
+}
+
+#usersListTable thead {
+    color: white;
+    background-color: #333;
+}
+
+#usersListTable tr {
+    margin: 0;
+}
+
+#usersListTable tr:nth-child(even) {
+    background-color: #aaa;
+}
+
+#usersListTable td, #usersListTable th {
+    margin: 0;
+    height: 1.2em;
+}
+
+#usersListTable th {
+    padding: 0.6em;
+}
+
+/*Layout Responsive - quando ecrã tem menos de 400px de largura*/
+@media screen and (max-width: 400px) {
+    .menu a {
+        float: none;
+        width: 100%;
+    }
+}
+
+#login, #register {
+    margin: 0 auto;
+    width: 500px;
+}
+
+#login h1, #register h1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px
+}
+
+#login div, #register div {
+    margin: 20px 0 15px 0;
+    width: 100%;
+}
+
+#login label, #register label {
+    color: rgb(0, 92, 86);
+    display: inline-block;
+    margin: 2em 0 0 0;
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.input-form {
+    height: 30px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 4px;
+}
+
+#submit {
+    display: flex;
+    padding-top: 20px;
+}
+
+#login input[type="submit"], #login button, #register input[type="submit"], #register button {
+    color: white;
+    margin: 0 auto;
+    height: 40px;
+    width: 160px;
+}
+
+.menu_login {
+    margin-top: 50px;
+    float: right;
+    list-style-type: none;
+    margin-right: 30px
+}
+
+.login_element {
+    text-align: right;
+    margin: 0 120px;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    font-size: 18px;
+}
+
+/*Carousel*/
+
+
+/*.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+Make .svg files in the carousel display properly in older browsers
+
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+QR code generator
+#qrCode {
+    margin: 15px;
+}*/
+
+/*
+.volunteering-content {
+    margin-left: 10%;
+    margin-right: 100px;
+}
+
+.volunteering-content-text {
+    margin-left: 2%;
+    margin-right: 500px;
+    font-size: 20px;
+}
+
+.volunteering-content-paragraphs {
+    margin-left: 2%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}*/
+
+.img-operations {
+    max-width: 100%;
+    width: 170px;
+    height: 190px;
+    border-bottom: 2px solid #999;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.a-operation {
+    font-size: 20px;
+    margin: 3px 4px;
+    text-decoration: none;
+    color: #a2c4c9;
+}
+
+    .a-operation:hover {
+        text-decoration: none;
+    }
+
+abbr {
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+}
+
+
+.ul-operation {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    float: left;
+    text-align: center;
+}
+
+
+.li-operation {
+    float: left;
+    margin-right: 30px;
+}
+
+
+.dot-green {
+    color: green;
+}
+
+
+.dot-red {
+    color: red;
+}
+
+.dot-yellow {
+    color: orange;
+}
+
+.body-dimensions {
+    margin: 10px;
+}
+
+.backImage {
+    height: 18px;
+    width: 27px;
+}
+
+.withoutUnderline:hover {
+    text-decoration: none;
+}
+
+.card {
+    width: 170px;
+    margin-bottom: 10px;
+    border: 2px solid #999;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.animal_container {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .float {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .float:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .float-item {
+    float: left;
+  }

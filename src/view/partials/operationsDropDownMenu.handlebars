@@ -1,0 +1,14 @@
+
+{{#if selectedMenu.operations}}
+<div class="menu_element" id="menu_element_op">
+{{else}}
+<div class="menu_element menu_element_op">
+{{/if}}
+    <li  id="dropbtn" onclick="subMenuOperations()">Operações</li>
+    <div class="dropdown-content" id="dropDownMenu">
+        
+        {{#each op_submenu}}
+        <a href="{{href}}">{{name}}</a>
+        {{/each}}
+    </div>
+</div>

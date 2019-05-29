@@ -1,0 +1,23 @@
+<div id="searchUsers">
+    <form id="searchUsersForm" method="GET" action="/{{route}}">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input class="search-input-form" type="text" name="username" />
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input class="search-input-form" type="email" name="email" />
+        </div>
+        <div class="form-group">
+            <label>Telefone:</label>
+            <input class="search-input-form" name="phone" />
+        </div>
+        <div class="form-group">
+            <label>Data de Nascimento:</label>
+            <input class="search-input-form" type="date" name="birthDate" />
+        </div>
+        <div id="submit" class="form-group" >
+            <button type="submit" class="confirmationButton" id="searchSubmitButton">Pesquisar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,67 @@
+﻿/*Definição do estilo de botão para confirmação de ação*/
+.confirmationButton, .confirmationButton:hover {
+    background-color: #02877E;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*cursor transforma-se: mão */
+    border-radius: 12px;
+}
+
+confirmationButtonr:hover {
+    color: white;
+}
+
+.exitButton {
+    background-color: #ed0e0e;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*cursor transforma-se: mão */
+    border-radius: 12px;
+}
+
+.unsponsorButton {
+    background-color: #ed0e0e;
+    border: none;
+    color: white;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer; /*cursor transforma-se: mão */
+    border-radius: 12px;
+}
+
+.entryButton {
+    background-color: #02877E;
+    border: none;
+    color: white;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer; /*cursor transforma-se: mão */
+    border-radius: 12px;
+}
+
+/*Estilo da tag hr*/
+hr {
+    color: grey;
+    background-color: grey;
+    height: 0.5px;
+}
