@@ -24,7 +24,7 @@
     "express-handlebars": "^3.0.2",
     "express-session": "^1.16.1",
     "mocha": "^6.1.4",
-    "mongoose": "^5.5.10",
+    "mongoose": "^5.7.5",
     "mongoose-auto-increment": "^5.0.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
